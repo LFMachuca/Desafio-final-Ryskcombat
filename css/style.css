@@ -75,7 +75,7 @@
   }
 }
 .banner {
-  background-image: url("./img/Banner-pagina-web.jpeg");
+  background-image: url("../img/Banner-pagina-web.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
