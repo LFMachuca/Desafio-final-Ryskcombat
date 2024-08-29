@@ -822,7 +822,7 @@ footer .logo-footer {
   background: #222222;
 }
 .contacto-wrapper .contacto-info {
-  background-image: url(/img/RyskCombat-logo.png);
+  background-image: url('../img/RyskCombat-logo.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
