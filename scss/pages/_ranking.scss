@@ -1,0 +1,77 @@
+
+
+/* Sección Ranking */
+.ranking-peleadores {
+    background: white;
+    text-align: center;
+    padding: 2rem 0;
+
+    h1 {
+        margin-bottom: 15px;
+        font-size: 60px;
+        font-weight: 600;
+        letter-spacing: 7px;
+        font-family: $title-font;
+    }
+
+    h3 {
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        font-family: $header-font;
+        color: $bg-complementario;
+    }
+
+    h2 {
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        margin: 0.5rem 0;
+        font-family: $title-font;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        margin: 1rem 0;
+    }
+}
+
+.tarjeta-ranking {
+    background: $bg-secciones-color;
+    color: #eee;
+    padding: 1.5rem;
+}
+
+.ranking-list {
+    padding-left: 0;
+    font-size: 14px;
+
+    li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0.3rem 0;
+        width: 100%;
+
+        strong {
+            margin-right: 1.5rem;
+            font-weight: bold;
+        }
+
+        a {
+            font-family: $body-font;
+            text-decoration: none;
+            color: #eee;
+            text-align: center;
+            width: 100%;
+            padding: 10px;
+
+            &:hover {
+                background: $bg-complementario;
+                color: $text-color;
+            }
+        }
+    }
+}
+

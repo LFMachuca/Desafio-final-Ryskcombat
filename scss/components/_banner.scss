@@ -1,0 +1,117 @@
+.banner {
+    background-image: url('/img/Banner-pagina-web.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 90vh;
+}
+
+.banner-contenido {
+    position: relative;
+    top: 15px;
+    color: #fff;
+    width: 55%;
+    padding: 40px;
+    margin-left: 20px;
+    background: $bg-trasparente;
+    text-align: left;
+
+    span {
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 3px;
+        font-family: $body-font;
+    }
+
+    h1 {
+        margin-bottom: 10px;
+        font-size: 60px;
+        font-weight: 600;
+        letter-spacing: 7px;
+        font-family: $title-font;
+    }
+
+    p {
+        margin-bottom: 40px;
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-family: $body-font;
+        font-style: italic;
+        font-weight: 200;
+    }
+
+    button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        width: 50%;
+        padding: 20px;
+        margin-bottom: 10px;
+        background: $btn-bg-color;
+        color: white;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: .3s ease all;
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background:$title-color;
+            position: absolute;
+            top: -80px;
+            left: 0;
+            transition: .3s ease-in-out;
+        }
+
+        &:hover::after {
+            top: 0;
+        }
+
+        span {
+            position: relative;
+            z-index: 2;
+            transition: .3s ease all;
+            font-family: $header-font;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .container-fluid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .banner-contenido {
+        width: 90%;
+        margin-left: 0;
+        padding: 20px;
+        text-align: center;
+
+        span {
+            font-size: 14px;
+        }
+
+        h1 {
+            font-size: 30px;
+            letter-spacing: 3px;
+        }
+
+        p {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0;
+        }
+    }
+}

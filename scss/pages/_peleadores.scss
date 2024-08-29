@@ -1,0 +1,177 @@
+/* Sub barra */
+.sub-barra-busqueda {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    justify-content: center;
+    align-items: center;
+}
+
+.botones-categorias {
+    display: flex;
+    gap: 5px;
+
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: 800;
+    font-family: $header-font;
+
+    .active {
+        background-color: #ffc812;
+        color: #000;
+    }
+}
+
+.dropdown-categorias {
+    display: none;
+
+    @media (max-width: 768px) {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+
+        .filter-btn {
+            width: 100%;
+            border-radius: 0;
+            padding: 20px;
+            margin-bottom: 5px;
+            transition: .3s ease-in;
+
+            &:hover {
+                background: $btn-bg-color;
+                color: #000;
+            }
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: #eee;
+            min-width: 100%;
+            border: 1px solid #ddd;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            margin-top: 5px;
+            padding: 10px;
+        }
+    }
+}
+
+.show {
+    display: block;
+}
+
+.peleadores {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: $bg-secciones-color;
+}
+
+.listado-peleadores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 30px;
+}
+
+.tarjeta-peleador {
+    width: 200px;
+    height: 350px;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 3px 5px 5px rgba(202, 156, 3, 0.795);
+    position: relative;
+
+    .tarjeta-contenido {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0; 
+        transform: .5s;
+        padding: 5px;
+        transition: .5s ease all;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        h2 {
+            font-family: $title-font;
+            letter-spacing: 3px;
+            font-size: 40px;
+            color: $bg-color;
+        }
+
+        p {
+            text-align: justify;
+            font-size: 15px;
+            color: #eee;
+
+            span {
+                font-family: $header-font;
+                color: $bg-complementario;
+            }
+        }
+
+        .peleador-redes-sociales {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            a {
+                color: #fab13d;
+                font-size: 20px;
+
+                &:hover {
+                    transform: scale(1.1);
+                    color: #fff;
+                }
+            }
+        } 
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .sub-barra-busqueda {
+        flex-direction: column;
+    }
+
+    .botones-categorias {
+        display: none;
+    }
+
+    .dropdown-categorias {
+        .filter-btn {
+            width: 100%;
+            border-radius: 0;
+            padding: 20px;
+            margin-bottom: 5px;
+            transition: .3s ease-in;
+
+            &:hover {
+                background: $btn-bg-color;
+                color: #000;
+            }
+        }
+    }
+}

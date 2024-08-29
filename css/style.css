@@ -1,0 +1,898 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&display=swap");
+/* Fuentes */
+/* Colores */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background: #262626;
+}
+
+.custom-toggler {
+  border: none;
+}
+.custom-toggler:hover, .custom-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+.custom-toggler .toggler-icon-bar {
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  gap: 10px;
+}
+.navbar-nav .nav-item {
+  width: 100%;
+}
+.navbar-nav .nav-link {
+  text-align: center;
+  font-family: "Oswald";
+  color: #f7f7f7;
+  text-transform: uppercase;
+}
+.navbar-nav .nav-link:hover {
+  background-color: #FFC812;
+  color: #000000;
+  transition: 0.3s ease;
+}
+
+@media (max-width: 900px) {
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .navbar-nav .nav-item {
+    width: 100%;
+  }
+  .navbar-nav .nav-link {
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    font-family: "Oswald";
+    color: #f7f7f7;
+    text-transform: uppercase;
+  }
+  .navbar-nav .nav-link:hover {
+    background-color: #FFC812;
+    color: #000000;
+    transition: 0.3s ease;
+  }
+}
+.banner {
+  background-image: url("/img/Banner-pagina-web.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 90vh;
+}
+
+.banner-contenido {
+  position: relative;
+  top: 15px;
+  color: #fff;
+  width: 55%;
+  padding: 40px;
+  margin-left: 20px;
+  background: rgba(38, 38, 38, 0.8980392157);
+  text-align: left;
+}
+.banner-contenido span {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  font-family: "Roboto Slab";
+}
+.banner-contenido h1 {
+  margin-bottom: 10px;
+  font-size: 60px;
+  font-weight: 600;
+  letter-spacing: 7px;
+  font-family: "Bebas Neue";
+}
+.banner-contenido p {
+  margin-bottom: 40px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-family: "Roboto Slab";
+  font-style: italic;
+  font-weight: 200;
+}
+.banner-contenido button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  width: 50%;
+  padding: 20px;
+  margin-bottom: 10px;
+  background: #FFC812;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease all;
+}
+.banner-contenido button::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  position: absolute;
+  top: -80px;
+  left: 0;
+  transition: 0.3s ease-in-out;
+}
+.banner-contenido button:hover::after {
+  top: 0;
+}
+.banner-contenido button span {
+  position: relative;
+  z-index: 2;
+  transition: 0.3s ease all;
+  font-family: "Oswald";
+}
+
+@media (max-width: 1000px) {
+  .container-fluid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .banner-contenido {
+    width: 90%;
+    margin-left: 0;
+    padding: 20px;
+    text-align: center;
+  }
+  .banner-contenido span {
+    font-size: 14px;
+  }
+  .banner-contenido h1 {
+    font-size: 30px;
+    letter-spacing: 3px;
+  }
+  .banner-contenido p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .banner-contenido button {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0;
+  }
+}
+.proximo-evento {
+  background: #262626;
+  width: 100%;
+}
+.proximo-evento .container-evento {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 15px;
+  padding: 60px;
+}
+.proximo-evento .container-evento .columna-1 {
+  text-align: center;
+  padding: 10px;
+}
+.proximo-evento .container-evento .columna-1 span {
+  font-family: "Roboto Slab";
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #fab13d;
+}
+.proximo-evento .container-evento .columna-1 h3 {
+  font-family: "Bebas Neue";
+  font-size: 40px;
+  color: #eee;
+}
+.proximo-evento .container-evento .columna-1 p {
+  display: inline;
+  font-family: "Oswald";
+  color: #fab13d;
+}
+.proximo-evento .container-evento .columna-2 {
+  padding: 10px;
+  text-align: center;
+}
+.proximo-evento .container-evento .columna-2 span {
+  font-size: 18px;
+  font-family: "Roboto Slab";
+  font-weight: 800;
+  color: #fab13d;
+}
+.proximo-evento .container-evento .columna-2 p {
+  font-family: "Bebas Neue";
+  font-size: 40px;
+  font-weight: 800;
+  color: #eee;
+}
+.proximo-evento .container-evento .columna-3 {
+  padding: 10px;
+  background: #FFC812;
+  grid-area: 2/1/3/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+}
+.proximo-evento .container-evento .columna-3 .timer-container {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.bx-timer {
+  line-height: 1;
+}
+.bx-timer .grande {
+  font-family: "Bebas Neue";
+  font-size: 4em;
+  font-weight: 800;
+}
+.bx-timer .chico {
+  font-family: "Roboto Slab";
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+@media (max-width: 550px) {
+  .timer-container {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.video-gallery {
+  background: #fff;
+}
+.video-gallery .title-header {
+  padding: 10px;
+  font-size: 60px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  font-family: "Bebas Neue";
+  text-align: center;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.section-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 15px;
+  align-items: flex-start;
+  padding: 50px;
+}
+.section-container .main-video {
+  background: #fff;
+  border-radius: 5px;
+  padding: 10px;
+}
+.section-container .main-video video {
+  width: 100%;
+  border-radius: 5px;
+}
+.section-container .main-video .title-video {
+  color: #333;
+  font-size: 23px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-family: "Bebas Neue";
+}
+.section-container .video-list {
+  background: #fab13d;
+  border-radius: 5px;
+  height: 520px;
+  overflow-y: scroll;
+}
+.section-container .video-list ::-webkit-scrollbar {
+  width: 7px;
+}
+.section-container .video-list ::-webkit-scrollbar-track {
+  background: #ccc;
+  border-radius: 50px;
+}
+.section-container .video-list ::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 50px;
+}
+.section-container .video-list .vid {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #f7f7f7;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.section-container .video-list .vid:hover {
+  background: #eee;
+}
+.section-container .video-list .vid.active {
+  background: #FFC812;
+}
+.section-container .video-list .vid.active .title-video {
+  color: #383838;
+}
+.section-container .video-list .vid .title-video {
+  color: #333;
+  font-size: 17px;
+  font-family: "Bebas Neue";
+}
+.section-container .video-list .vid video {
+  width: 100px;
+  border-radius: 5px;
+}
+
+@media (max-width: 991px) {
+  .section-container {
+    grid-template-columns: 1.5fr 1fr;
+    padding: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .section-container {
+    grid-template-columns: 1fr;
+  }
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+  background: #0f0f0f;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  color: white;
+  text-align: center;
+  font-family: "Roboto Slab";
+}
+footer .logo-footer {
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+}
+
+.redes-sociales {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.redes-sociales a {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  margin: 10px;
+  border: 1px solid white;
+  border-radius: 50%;
+  transition: all 0.3s ease-in;
+}
+.redes-sociales a i {
+  color: white;
+  font-size: 1.5rem;
+  transition: all 0.2s ease-in;
+}
+.redes-sociales a i:hover {
+  color: #000000;
+}
+.redes-sociales a:hover {
+  background-color: #FFC812;
+  border: 1px solid #383838;
+}
+
+/* Sección Ranking */
+.ranking-peleadores {
+  background: white;
+  text-align: center;
+  padding: 2rem 0;
+}
+.ranking-peleadores h1 {
+  margin-bottom: 15px;
+  font-size: 60px;
+  font-weight: 600;
+  letter-spacing: 7px;
+  font-family: "Bebas Neue";
+}
+.ranking-peleadores h3 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-family: "Oswald";
+  color: #fab13d;
+}
+.ranking-peleadores h2 {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin: 0.5rem 0;
+  font-family: "Bebas Neue";
+}
+.ranking-peleadores img {
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+}
+
+.tarjeta-ranking {
+  background: #262626;
+  color: #eee;
+  padding: 1.5rem;
+}
+
+.ranking-list {
+  padding-left: 0;
+  font-size: 14px;
+}
+.ranking-list li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.3rem 0;
+  width: 100%;
+}
+.ranking-list li strong {
+  margin-right: 1.5rem;
+  font-weight: bold;
+}
+.ranking-list li a {
+  font-family: "Roboto Slab";
+  text-decoration: none;
+  color: #eee;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+}
+.ranking-list li a:hover {
+  background: #fab13d;
+  color: #383838;
+}
+
+/* Slider de imágenes */
+.carousel-item {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.carousel-caption {
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); /* Sombra del texto */
+}
+
+/* Información de la cartelera */
+.info-cartelera {
+  background: rgba(0, 0, 0, 0.9);
+  text-align: center;
+}
+.info-cartelera h5 {
+  color: #fab13d;
+  font-family: "Oswald";
+  font-size: 1.5rem;
+}
+.info-cartelera h2 {
+  font-family: "Bebas Neue";
+  font-size: 3em;
+  letter-spacing: 3px;
+  font-weight: 800;
+}
+.info-cartelera p {
+  font-family: "Roboto Slab";
+  color: #fab13d;
+  font-size: 1rem;
+}
+.info-cartelera .boton-carrousel {
+  background: #FFC812;
+  border: none;
+  outline: none;
+  border-radius: 0;
+  width: 60%;
+  padding: 13px;
+  color: #000000;
+  font-family: "Roboto Slab";
+  font-weight: 700;
+  transition: 0.4s;
+}
+.info-cartelera .boton-carrousel:hover {
+  transform: scale(1.1);
+}
+
+/* Cartelera Carrousel */
+.eventos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #262626;
+}
+
+.tarjetas-contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 30px;
+}
+
+.tarjeta-personalizada {
+  position: relative;
+  width: 300px;
+  height: 350px;
+}
+.tarjeta-personalizada .cara {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+.tarjeta-personalizada .frontal {
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0 5px 10px #000000;
+}
+.tarjeta-personalizada .frontal img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.tarjeta-personalizada .frontal h3 {
+  position: absolute;
+  bottom: 0;
+  color: #eee;
+  width: 100%;
+  padding: 20px;
+  background: rgba(38, 38, 38, 0.8980392157);
+  text-align: center;
+  font-family: "Bebas Neue";
+}
+.tarjeta-personalizada .trasera {
+  transform: perspective(600px) rotateY(180deg);
+  background: #fab13d;
+  padding: 15px;
+  color: #383838;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0 5px 10px #000000;
+  transition: 0.5s;
+}
+.tarjeta-personalizada .trasera .link-tarjeta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tarjeta-personalizada .trasera .link-tarjeta a {
+  font-family: "Roboto Slab";
+  padding: 15px;
+  text-decoration: none;
+  color: #fff;
+  width: 100%;
+  background: #000000;
+  transition: 0.2s;
+}
+.tarjeta-personalizada .trasera .link-tarjeta a:hover {
+  background: #262626;
+}
+.tarjeta-personalizada .trasera h3 {
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-top: 20px;
+  letter-spacing: 2px;
+  font-family: "Bebas Neue";
+  color: #000000;
+}
+.tarjeta-personalizada .trasera p {
+  font-family: "Roboto Slab";
+  letter-spacing: 1px;
+}
+
+.tarjeta-personalizada:hover .frontal {
+  transform: perspective(600px) rotateY(180deg);
+}
+
+.tarjeta-personalizada:hover .trasera {
+  transform: perspective(600px) rotateY(360deg);
+}
+
+/* Sub barra */
+.sub-barra-busqueda {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  justify-content: center;
+  align-items: center;
+}
+
+.botones-categorias {
+  display: flex;
+  gap: 5px;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 18px;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 800;
+  font-family: "Oswald";
+}
+.filter-btn .active {
+  background-color: #ffc812;
+  color: #000;
+}
+
+.dropdown-categorias {
+  display: none;
+}
+@media (max-width: 768px) {
+  .dropdown-categorias {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+  .dropdown-categorias .filter-btn {
+    width: 100%;
+    border-radius: 0;
+    padding: 20px;
+    margin-bottom: 5px;
+    transition: 0.3s ease-in;
+  }
+  .dropdown-categorias .filter-btn:hover {
+    background: #FFC812;
+    color: #000;
+  }
+  .dropdown-categorias .dropdown-content {
+    display: none;
+    position: absolute;
+    background: #eee;
+    min-width: 100%;
+    border: 1px solid #ddd;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: 5px;
+    padding: 10px;
+  }
+}
+
+.show {
+  display: block;
+}
+
+.peleadores {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #262626;
+}
+
+.listado-peleadores {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 30px;
+}
+
+.tarjeta-peleador {
+  width: 200px;
+  height: 350px;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 3px 5px 5px rgba(202, 156, 3, 0.795);
+  position: relative;
+}
+.tarjeta-peleador .tarjeta-contenido {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transform: 0.5s;
+  padding: 5px;
+  transition: 0.5s ease all;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.tarjeta-peleador .tarjeta-contenido h2 {
+  font-family: "Bebas Neue";
+  letter-spacing: 3px;
+  font-size: 40px;
+  color: #fff;
+}
+.tarjeta-peleador .tarjeta-contenido p {
+  text-align: justify;
+  font-size: 15px;
+  color: #eee;
+}
+.tarjeta-peleador .tarjeta-contenido p span {
+  font-family: "Oswald";
+  color: #fab13d;
+}
+.tarjeta-peleador .tarjeta-contenido .peleador-redes-sociales {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.tarjeta-peleador .tarjeta-contenido .peleador-redes-sociales a {
+  color: #fab13d;
+  font-size: 20px;
+}
+.tarjeta-peleador .tarjeta-contenido .peleador-redes-sociales a:hover {
+  transform: scale(1.1);
+  color: #fff;
+}
+.tarjeta-peleador .tarjeta-contenido:hover {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .sub-barra-busqueda {
+    flex-direction: column;
+  }
+  .botones-categorias {
+    display: none;
+  }
+  .dropdown-categorias .filter-btn {
+    width: 100%;
+    border-radius: 0;
+    padding: 20px;
+    margin-bottom: 5px;
+    transition: 0.3s ease-in;
+  }
+  .dropdown-categorias .filter-btn:hover {
+    background: #FFC812;
+    color: #000;
+  }
+}
+/* Página Contacto */
+.contacto {
+  background: #262626;
+  min-height: 100vh;
+  color: #eee;
+  font-family: "Roboto Slab";
+  padding: 0 1.5em;
+}
+.contacto .contacto-contenido {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5em;
+}
+.contacto .contacto-contenido h1 {
+  text-align: center;
+  font-family: "Bebas Neue";
+  font-size: 3em;
+  color: #fab13d;
+}
+
+.contacto-wrapper > * {
+  padding: 1em;
+}
+
+.contacto-wrapper {
+  box-shadow: 0 0 20px 0 rgba(202, 156, 3, 0.795);
+}
+.contacto-wrapper .formulario-contacto {
+  background: #222222;
+}
+.contacto-wrapper .contacto-info {
+  background-image: url(/img/RyskCombat-logo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: #000000;
+}
+.contacto-wrapper .contacto-info h4,
+.contacto-wrapper .contacto-info ul,
+.contacto-wrapper .contacto-info p {
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+.contacto-wrapper .contacto-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.formulario-contacto form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.formulario-contacto form p {
+  margin: 0;
+  padding: 1em;
+}
+.formulario-contacto form button,
+.formulario-contacto form input,
+.formulario-contacto form textarea {
+  width: 100%;
+  padding: 0.7em;
+  border: none;
+  background: none;
+  border-bottom: 1px solid #fab13d;
+  outline: none;
+  color: #eee;
+}
+.formulario-contacto form .boton-formulario {
+  background: #FFC812;
+  border: 0;
+  text-transform: uppercase;
+  padding: 1em;
+}
+.formulario-contacto form .boton-formulario:hover, .formulario-contacto form .boton-formulario:focus {
+  background: #fab13d;
+  color: #000000;
+  transition: background-color 1s ease-out;
+  outline: 0;
+}
+.formulario-contacto form .block {
+  grid-column: 1/3;
+}
+
+@media (min-width: 900px) {
+  .contacto {
+    padding: 0 4rem;
+  }
+  .contacto-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  .contacto-wrapper > * {
+    padding: 2em;
+  }
+  .contacto-info h4,
+  .contacto-info p,
+  .contacto-info ul {
+    text-align: left !important;
+    padding: 1em;
+    color: #fab13d;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

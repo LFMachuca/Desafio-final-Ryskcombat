@@ -1,0 +1,164 @@
+/* Slider de imágenes */
+.carousel-item {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.carousel-caption {
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); /* Sombra del texto */
+}
+
+/* Información de la cartelera */
+.info-cartelera {
+    background: rgba(0, 0, 0, 0.9);
+    text-align: center;
+
+    h5 {
+        color: $bg-complementario;
+        font-family:$header-font;
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-family: $title-font;
+        font-size: 3em;
+        letter-spacing: 3px;
+        font-weight: 800;
+    }
+
+    p {
+        font-family: $body-font;
+        color: $bg-complementario;
+        font-size: 1rem;
+    }
+
+    .boton-carrousel {
+        background: $btn-bg-color;
+        border: none;
+        outline: none;
+        border-radius: 0;
+        width: 60%;
+        padding: 13px;
+        color: #000000;
+        font-family: $body-font;
+        font-weight: 700;
+        transition: .4s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+/* Cartelera Carrousel */
+.eventos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: $bg-secciones-color;
+}
+
+.tarjetas-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px;
+}
+
+.tarjeta-personalizada {
+    position: relative;
+    width: 300px;
+    height: 350px;
+
+    .cara {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        overflow: hidden;
+    }
+
+    .frontal {
+        transform: perspective(600px) rotateY(0deg);
+        box-shadow: 0 5px 10px #000000;
+
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h3 {
+            position: absolute;
+            bottom: 0;
+            color: #eee;
+            width: 100%;
+            padding: 20px;
+            background: $bg-trasparente;
+            text-align: center;
+            font-family: $title-font;
+        }
+    }
+
+    .trasera {
+        transform: perspective(600px) rotateY(180deg);
+        background: $bg-complementario;
+        padding: 15px;
+        color: $text-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        box-shadow: 0 5px 10px #000000;
+        transition: .5s;
+
+        .link-tarjeta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            a {
+                font-family: $body-font;
+                padding: 15px;
+                text-decoration: none;
+                color: $bg-color;
+                width: 100%;
+                background: $title-color;
+                transition: .2s;
+
+                &:hover {
+                    background:$bg-secciones-color;
+                }
+            }
+        }
+
+        h3 {
+            text-transform: uppercase;
+            font-size: 30px;
+            margin-top: 20px;
+            letter-spacing: 2px;
+            font-family: $title-font;
+            color: $title-color;
+        }
+
+        p {
+            font-family: $body-font;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+.tarjeta-personalizada:hover .frontal {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.tarjeta-personalizada:hover .trasera {
+    transform: perspective(600px) rotateY(360deg);
+}

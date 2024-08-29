@@ -1,0 +1,100 @@
+.proximo-evento {
+    background: $bg-secciones-color;
+    width: 100%;
+
+    .container-evento {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        gap: 15px;
+        padding: 60px;
+
+        .columna-1 {
+            text-align: center;
+            padding: 10px;
+
+            span {
+                font-family: $body-font;
+                font-size: 16px;
+                font-weight: 800;
+                letter-spacing: 3px;
+                color: $bg-complementario;
+            }
+
+            h3 {
+                font-family: $title-font;
+                font-size: 40px;
+                color: #eee;
+            }
+
+            p {
+                display: inline;
+                font-family: $header-font;
+                color: $bg-complementario;
+            }
+        }
+
+        .columna-2 {
+            padding: 10px;
+            text-align: center;
+
+            span {
+                font-size: 18px;
+                font-family: $body-font;
+                font-weight: 800;
+                color: $bg-complementario;
+            }
+
+            p {
+                font-family:$title-font;
+                font-size: 40px;
+                font-weight: 800;
+                color: #eee;
+            }
+        }
+
+        .columna-3 {
+            padding: 10px;
+            background: $btn-bg-color;
+            grid-area: 2 / 1 / 3 / 3;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+            text-align: center;
+
+            .timer-container {
+                display: flex;
+                gap: 2rem;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+.bx-timer {
+    line-height: 1;
+
+    .grande {
+        font-family: $title-font;
+        font-size: 4em;
+        font-weight: 800;
+    }
+
+    .chico {
+        font-family: $body-font;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: 600;
+    }
+}
+
+@media (max-width: 550px) {
+    .timer-container {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
