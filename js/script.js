@@ -46,16 +46,23 @@ setInterval(() => {
 }, 1000);
 
 
+
 // filtro peleadores
 let categoriaSeleccionada = "";
+
+// Función para alternar visibilidad del dropdown
+function toggleDropdown() {
+    let dropdownContent = document.getElementById('dropdown-categorias');
+    dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+}
 
 // Filtrar peleadores basado en la categoría seleccionada
 function filtrarPeleadores() {
     const peleadores = document.querySelectorAll('.tarjeta-peleador');
 
     peleadores.forEach(peleador => {
-        const categoriaPeleador = peleador.getAttribute('category').toLowerCase();
-        
+        const categoriaPeleador = peleador.getAttribute('data-category');
+
         if (categoriaSeleccionada === "" || categoriaPeleador === categoriaSeleccionada) {
             peleador.style.display = 'block';
         } else {
@@ -64,32 +71,38 @@ function filtrarPeleadores() {
     });
 }
 
-// Eventos para los botones de categoría
-// document.querySelectorAll('.filter-btn').forEach(button => {
-//     button.addEventListener('click', function() {
-//         document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-//         this.classList.add('active');
-//         categoriaSeleccionada = this.getAttribute('data-categoria');
-//         filtrarPeleadores();
-//     });
-// });
-
-// Filtrar peleadores al seleccionar una categoría
+// Evento para seleccionar categorías y filtrar peleadores
 document.querySelectorAll('.filter-btn').forEach(button => {
-    button.addEventListener('click', () => {
-        categoriaSeleccionada = button.getAttribute('data-category');
-        filtrarPeleadores();
+    button.addEventListener('click', function(event) {
+        event.stopPropagation(); // Evita la propagación del evento
 
-        // Actualizar el texto del botón con la categoría seleccionada
-        document.getElementById('dropdown-btn').textContent = button.textContent;
+        if (this.getAttribute('data-category') !== null) {
+            // Actualiza la categoría seleccionada solo si se hace clic en una categoría
+            categoriaSeleccionada = this.getAttribute('data-category');
+            document.getElementById('dropdown-btn').textContent = this.textContent;
 
-        // Cerrar el dropdown después de seleccionar una categoría
-        document.getElementById('dropdown-content').classList.remove('show');
+            // Aplica la clase activa al botón seleccionado
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+
+            filtrarPeleadores(); // Filtra los peleadores según la categoría seleccionada
+
+            // Ocultar el dropdown después de seleccionar una categoría
+            document.getElementById('dropdown-categorias').style.display = 'none';
+        }
     });
 });
 
-// Mostrar/Ocultar el contenido del dropdown al hacer clic en el botón
-document.getElementById('dropdown-btn').addEventListener('click', () => {
-    document.getElementById('dropdown-content').classList.toggle('show');
+// Evento para mostrar/ocultar el menú dropdown sin filtrar
+document.getElementById('dropdown-btn').addEventListener('click', function(event) {
+    event.stopPropagation(); // Evita que el evento se propague a otros elementos
+    toggleDropdown(); // Llama a la función para alternar el dropdown
 });
-// no andan estos scripts revisar 
+
+// Evento para cerrar el dropdown al hacer clic fuera del área
+document.addEventListener('click', function(event) {
+    let dropdownContent = document.getElementById('dropdown-categorias');
+    if (event.target !== dropdownContent && !dropdownContent.contains(event.target) && event.target.id !== 'dropdown-btn') {
+        dropdownContent.style.display = 'none';
+    }
+});

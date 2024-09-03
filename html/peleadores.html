@@ -58,18 +58,18 @@
     <!-- barra para filtrar peleadores -->
     <div class="sub-barra-busqueda">
         <div class="botones-categorias">
-            <button class="filter-btn" data-categoria="liviano">Peso Liviano</button>
-            <button class="filter-btn" data-categoria="mosca">Peso Mosca</button>
-            <button class="filter-btn" data-categoria="pluma">Peso Pluma</button>
-            <button class="filter-btn" data-categoria="welter">Peso Welter</button>
-            <button class="filter-btn" data-categoria="libre">Peso Libre</button>
-            <button class="filter-btn" data-categoria="">Todas las Categorías</button>
+            <button class="filter-btn" data-category="liviano">Peso Liviano</button>
+            <button class="filter-btn" data-category="mosca">Peso Mosca</button>
+            <button class="filter-btn" data-category="pluma">Peso Pluma</button>
+            <button class="filter-btn" data-category="welter">Peso Welter</button>
+            <button class="filter-btn" data-category="libre">Peso Libre</button>
+            <button class="filter-btn" data-category="">Todas las Categorías</button>
         </div>
 
         <!-- barra para filtrar mobile -->
         <div class="dropdown-categorias">
             <button class="filter-btn" id="dropdown-btn">Seleccionar categoría</button>
-                <div class="dropdown-content" id="dropdown-content">
+                <div class="dropdown-content" id="dropdown-categorias">
                 <button class="filter-btn" data-category="liviano">Liviano</button>
                 <button class="filter-btn" data-category="mosca">Mosca</button>
                 <button class="filter-btn" data-category="pluma">Pluma</button>
@@ -83,7 +83,7 @@
     <section class="peleadores">
         <div class="container">
             <div class="listado-peleadores">
-                <div class="tarjeta-peleador" style="background-image: url(../img/perfil-peleador-tarjeta-hombre.jpg);" category="liviano">
+                <div class="tarjeta-peleador" style="background-image: url(../img/perfil-peleador-tarjeta-hombre.jpg);" data-category="liviano">
                     <div class="tarjeta-contenido">
                         <p><span>NOMBRE PELEADOR</span></p>
                         <h2>APODO</h2>  
@@ -97,7 +97,7 @@
                     </div>
                 </div>
                 <!-- Peleador 2 -->
-                <div class="tarjeta-peleador" style="background-image: url(../img/perfil-peleador-tarjeta-hombre.jpg);" category="mosca">
+                <div class="tarjeta-peleador" style="background-image: url(../img/perfil-peleador-tarjeta-hombre.jpg);" data-category="mosca">
                     <div class="tarjeta-contenido">
                         <p><span>NOMBRE PELEADOR</span></p>
                         <h2>APODO</h2>  
@@ -111,7 +111,7 @@
                     </div>
                 </div>
                 <!-- Peleador 3 -->
-                <div class="tarjeta-peleador" style="background-image: url(../img/perfil-peleador-tarjeta-hombre.jpg);" category="pluma">
+                <div class="tarjeta-peleador" style="background-image: url(../img/perfil-peleador-tarjeta-hombre.jpg);" data-category="pluma">
                     <div class="tarjeta-contenido">
                         <p><span>NOMBRE PELEADOR</span></p>
                         <h2>APODO</h2>  
@@ -125,7 +125,7 @@
                     </div>
                 </div>
                 <!-- Peleador 4 -->
-                <div class="tarjeta-peleador" style="background-image: url(../img/perfil-peleador-tarjeta-hombre.jpg);" category="welter">
+                <div class="tarjeta-peleador" style="background-image: url(../img/perfil-peleador-tarjeta-hombre.jpg);" data-category="welter">
                     <div class="tarjeta-contenido">
                         <p><span>NOMBRE PELEADOR</span></p>
                         <h2>APODO</h2>  
@@ -139,7 +139,7 @@
                     </div>
                 </div>
                 <!-- Peleador 5 -->
-                <div class="tarjeta-peleador" style="background-image: url(../img/perfil-peleador-tarjeta-hombre.jpg);" category="libre">
+                <div class="tarjeta-peleador" style="background-image: url(../img/perfil-peleador-tarjeta-hombre.jpg);" data-category="libre">
                     <div class="tarjeta-contenido">
                         <p><span>NOMBRE PELEADOR</span></p>
                         <h2>APODO</h2>  
@@ -153,7 +153,7 @@
                     </div>
                 </div>
                 <!-- Peleador 6 -->
-                <div class="tarjeta-peleador" style="background-image: url(../img/perfil-peleador-tarjeta-hombre.jpg);" category="liviano">
+                <div class="tarjeta-peleador" style="background-image: url(../img/perfil-peleador-tarjeta-hombre.jpg);" data-category="liviano">
                     <div class="tarjeta-contenido">
                         <p><span>NOMBRE PELEADOR</span></p>
                         <h2>APODO</h2>  
