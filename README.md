@@ -1,4 +1,4 @@
-# Landing Page - Evento de Peleas 🥊
+# Landing Page - Riskcombat 🥊
 
 Este proyecto es una landing page para promocionar un evento de peleas, desarrollada con **Bootstrap, JavaScript y Sass**. La web incluye información sobre los peleadores, categorías de peso y una barra de búsqueda para filtrar fácilmente a los competidores.
 
